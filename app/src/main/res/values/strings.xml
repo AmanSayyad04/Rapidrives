@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SmartVehicles</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="we_will_send_you_one_time_password_on_this_given_mobile_number">We will send you one time password on this given mobile number</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+</resources>
