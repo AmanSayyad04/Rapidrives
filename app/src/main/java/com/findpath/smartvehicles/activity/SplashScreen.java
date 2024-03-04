@@ -1,4 +1,4 @@
-package com.findpath.smartvehicles;
+package com.findpath.smartvehicles.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.findpath.smartvehicles.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashScreen extends AppCompatActivity {
@@ -23,9 +24,9 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 if(mAuth.getCurrentUser()!=null){
-                    startActivity(new Intent(SplashScreen.this,home.class));
+                    startActivity(new Intent(SplashScreen.this, home.class));
                 }else{
-                    startActivity(new Intent(SplashScreen.this,entermobilenumberone.class));
+                    startActivity(new Intent(SplashScreen.this, entermobilenumberone.class));
                 }
 //                startActivity(new Intent(SplashScreen.this,entermobilenumberone.class));
 //                finish();

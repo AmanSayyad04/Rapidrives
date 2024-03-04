@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.findpath.smartvehicles" >
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartVehicles"
         tools:targetApi="31" >
-
 
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -37,20 +36,45 @@
             android:value="AIzaSyAqFXCcyzZZybcgDvZcnTRxb0x_a9x1zoE" />
 
         <activity
-            android:name=".NavigatorActivity"
+            android:name=".activity.MechanicActivity"
+            android:exported="false"
+            android:label="@string/title_activity_mechanic" />
+        <activity
+            android:name=".activity.DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyBooking"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Contact_Us"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Privacy"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Notification"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyWallet"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EVInfo"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyFavouriteSpot"
+            android:exported="false" />
+        <activity
+            android:name=".activity.NavigatorActivity"
             android:exported="false"
             android:label="@string/title_activity_navigator" />
         <activity
-            android:name=".MyProfile"
+            android:name=".activity.MyProfile"
             android:exported="false" />
         <activity
-            android:name=".UserActivity"
+            android:name=".activity.UserActivity"
             android:exported="false" />
         <activity
-            android:name=".MechanicActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SplashScreen"
+            android:name=".activity.SplashScreen"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,17 +83,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".home"
+            android:name=".activity.home"
             android:exported="false" />
         <activity
-            android:name=".verifyenterotptwo"
+            android:name=".activity.verifyenterotptwo"
             android:exported="false" />
         <activity
-            android:name=".entermobilenumberone"
+            android:name=".activity.entermobilenumberone"
             android:exported="true" />
 
         <receiver
-            android:name=".OTP_Receiver"
+            android:name=".activity.OTP_Receiver"
             android:exported="true"
             android:permission="com.google.android.gms.auth.api.phone.permission.SEND" >
             <intent-filter>

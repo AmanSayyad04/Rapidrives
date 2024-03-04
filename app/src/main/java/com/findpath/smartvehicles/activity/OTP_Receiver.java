@@ -1,4 +1,4 @@
-package com.findpath.smartvehicles;
+package com.findpath.smartvehicles.activity;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

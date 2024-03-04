@@ -7,7 +7,7 @@
     android:overScrollMode="never"
     android:scrollbars="none"
     android:background="#21FFC107"
-    tools:context=".verifyenterotptwo">
+    tools:context=".activity.verifyenterotptwo">
 
     <LinearLayout
         android:layout_width="match_parent"

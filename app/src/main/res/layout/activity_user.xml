@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserActivity">
+    tools:context=".activity.UserActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,7 +17,7 @@
         android:src="@drawable/image1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/firstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -26,9 +26,19 @@
         android:text="User Name"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
+    <TextView
+        android:id="@+id/lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="User Name"
+        app:layout_constraintStart_toEndOf="@+id/firstName"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/emailId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -36,13 +46,14 @@
         android:layout_marginTop="24dp"
         android:text="abc123@gmail.com"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +62,7 @@
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
             android:layout_weight="1">
 
             <TextView
@@ -71,9 +83,10 @@
         </RelativeLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/addMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
             android:text="Add Money" />
 
     </LinearLayout>
@@ -137,13 +150,13 @@
                 android:src="@drawable/my_ev" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/myEv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:textStyle="bold"
                 android:layout_toEndOf="@+id/img2"
-                android:text="My EV" />
+                android:text="My EV"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Divider 2 -->
@@ -165,13 +178,13 @@
                 android:src="@drawable/my_fav_spot" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/myFavouriteSpot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/img3"
-                android:text="My Favourite Spots" />
+                android:text="My Favourite Spots"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Divider 1 -->
@@ -194,13 +207,13 @@
                 android:src="@drawable/my_bookings" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/myBookings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:textStyle="bold"
                 android:layout_toEndOf="@+id/img4"
-                android:text="My Bookings" />
+                android:text="My Bookings"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Divider 2 -->
@@ -223,13 +236,13 @@
                 android:src="@drawable/nav_user" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/myWallet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/img5"
-                android:text="My Wallet" />
+                android:text="My Wallet"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Divider 2 -->
@@ -260,13 +273,13 @@
                 android:src="@drawable/notifications" />
 
             <TextView
-                android:id="@+id/dropdownItem1"
+                android:id="@+id/notification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/dropdownIcon1"
-                android:text="Notification Setting" />
+                android:text="Notification Setting"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Divider -->
@@ -290,13 +303,13 @@
                 android:src="@drawable/privacy_policy" />
 
             <TextView
-                android:id="@+id/dropdownItem2"
+                android:id="@+id/privacy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/dropdownIcon2"
-                android:text="Privacy Policy" />
+                android:text="Privacy Policy"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Divider -->
@@ -319,13 +332,13 @@
                 android:src="@drawable/contact_us" />
 
             <TextView
-                android:id="@+id/dropdownItem3"
+                android:id="@+id/contactUs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/dropdownIcon3"
-                android:text="Contact Us" />
+                android:text="Contact Us"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Divider -->
@@ -370,7 +383,8 @@
             android:layout_gravity="start"
             android:layout_margin="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Log Out" />
+            android:text="Log Out"
+            android:backgroundTint="@color/colorAccent"/>
 
     </LinearLayout>
 

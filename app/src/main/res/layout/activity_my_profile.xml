@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyProfile">
+    tools:context=".activity.MyProfile">
 
     <ImageView
         android:id="@+id/profileImageView"
         android:layout_width="120dp"
+        android:background="@drawable/round"
+        android:src="@drawable/camera_ic"
+        android:hint="Profile Pic"
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp" />
@@ -19,6 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/profileImageView"
         android:layout_centerHorizontal="true"
+
+        android:backgroundTint="@color/colorAccent"
         android:layout_marginTop="16dp"
         android:text="Upload" />
 
@@ -29,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/uplod_img"
         android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="20dp"
         android:orientation="horizontal">
 
         <!-- Two EditTexts horizontally aligned -->
@@ -37,18 +43,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/round"
             android:hint="First Name"
             android:inputType="textPersonName"
-            android:padding="8dp" />
+            android:padding="15dp" />
 
         <EditText
             android:id="@+id/lastNameEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/round"
             android:hint="Last Name"
             android:inputType="textPersonName"
-            android:padding="8dp" />
+            android:padding="15dp" />
     </LinearLayout>
 
     <EditText
@@ -57,9 +65,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextContainer"
         android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/round"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:padding="8dp" />
+        android:padding="15dp" />
 
     <Button
         android:id="@+id/updateButton"
@@ -67,6 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/emailEditText"
         android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorAccent"
         android:layout_marginTop="16dp"
         android:text="Update" />
 

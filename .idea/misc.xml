@@ -24,8 +24,25 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/SmartVehicles/app/src/main/res/menu/main_menu.xml" value="0.21551724137931033" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/SmartVehicles/app/src/main/res/menu/nav_drawer_menu.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/SmartVehicles/app/src/main/res/menu/nav_menu.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/drawable/camera_ic.xml" value="0.2315" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/drawable/charging_station.xml" value="0.1835" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/drawable/charging_station_map.xml" value="0.105" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/drawable/round.xml" value="0.14" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_contact_us.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_details.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_evinfo.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_mechanic.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_my_booking.xml" value="0.2109375" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_my_favourite_spot.xml" value="0.225" />
         <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_my_profile.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_my_wallet.xml" value="0.225" />
         <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_navigator.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_notification.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_privacy.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/activity_user.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/fragment_cancelled.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/fragment_confirmed.xml" value="0.225" />
+        <entry key="..\:/Users/Admin/Desktop/backup RapiDrive/SmartVehicles/app/src/main/res/layout/fragment_history.xml" value="0.225" />
       </map>
     </option>
   </component>
