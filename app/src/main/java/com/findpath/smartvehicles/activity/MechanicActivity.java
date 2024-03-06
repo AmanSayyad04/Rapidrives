@@ -201,11 +201,16 @@ public class MechanicActivity extends FragmentActivity implements OnMapReadyCall
                 String title = marker.getTitle();
                 LatLng markerLatLng = marker.getPosition();
                 String address = getAddressFromLatLng(markerLatLng);
+                String mobileNumber = findMobileNumber(markerLatLng);
+
                 // Handle marker click event
                 // You can perform actions like showing an info window, opening a new activity, etc.
-                Intent intent = new Intent(MechanicActivity.this, DetailsActivity.class);
+                Intent intent = new Intent(MechanicActivity.this, Mechanic_info.class);
                 intent.putExtra("title", title);
                 intent.putExtra("address", address);
+                intent.putExtra("latitude", marker.getPosition().latitude);
+                intent.putExtra("longitude", marker.getPosition().longitude);
+                intent.putExtra("mobileNumber", mobileNumber);
                 startActivity(intent);
                 // Example: Display a toast with the marker title
                 Toast.makeText(MechanicActivity.this, marker.getTitle(), Toast.LENGTH_SHORT).show();
@@ -214,6 +219,16 @@ public class MechanicActivity extends FragmentActivity implements OnMapReadyCall
             }
         });
 
+    }
+
+    private String findMobileNumber(LatLng markerLatLng) {
+        for (Marker marker : customMarkers) {
+            if (marker.getPosition().equals(markerLatLng)) {
+                // Assuming you've set the mobile number as the snippet of the marker
+                return marker.getSnippet();
+            }
+        }
+        return "";
     }
 
     private String getAddressFromLatLng(LatLng latLng) {
@@ -237,41 +252,65 @@ public class MechanicActivity extends FragmentActivity implements OnMapReadyCall
         // ...
 
         // Example:
-        addCustomMarker(new LatLng(17.6894968	,74.02345494), "Renuka Auto Services");
-        addCustomMarker(new LatLng(17.69114708	,74.02417668), "Akshada Auto Garage");
-        addCustomMarker(new LatLng(17.69334744	,74.02432103), "Mobil Car Care - Samarth Garage & Spares");
-        addCustomMarker(new LatLng(17.70262988	,74.02489843), "VAJRESHWRI AUTO GARAGE");
-        addCustomMarker(new LatLng(17.6778907	,73.98673199), "ANIKET AUTO GARAGE");
-        addCustomMarker(new LatLng(17.67928091	,73.98904942), "SHREE GANESH AUTO GARAGE Car Service Station");
-        addCustomMarker(new LatLng(17.69000773	,74.02361568), "Renuka Auto Services");
-        addCustomMarker(new LatLng(17.70122478	,73.99387687), "CHINTAMANI AUTO GARAGE");
-        addCustomMarker(new LatLng(17.67983084	,74.01378366), "MAULI DNYANRAJ AUTO GARAGE");
-        addCustomMarker(new LatLng(17.69139545	,74.00164537), "Sun Shine Auto Works and Repairs");
-        addCustomMarker(new LatLng(17.67854422	,74.02658944), "Autochoice car care");
-//        addCustomMarker(new LatLng(19.25612 , 72.97145), "Heritage Motors, Ghodbunder");
-//        addCustomMarker(new LatLng(19.1972 , 72.96321), "Heritage Motors, Panchpakhadi");
-//        addCustomMarker(new LatLng(19.277922 , 72.880256), "Inderjit Cars, Mira Road");
-//        addCustomMarker(new LatLng(17.695980908204717, 74.01587009526581), "Kazam Charging Station");
-//        addCustomMarker(new LatLng(17.684123951030173, 74.02222156620564), "Electric Vehicle Charging Station");
-//        addCustomMarker(new LatLng(17.679626279824976, 74.02179241276376), "15A, Pune - Bengaluru Hwy");
-//        addCustomMarker(new LatLng(16.6869187 , 74.2703805), "E-Fill Charging Station");
-//        addCustomMarker(new LatLng(17.951666402421566, 73.93468913858099), "Electric Vehicle Charging Station");
-//        addCustomMarker(new LatLng(17.639396516542654, 74.01241593064613), "TATA Charging Station");
-//        addCustomMarker(new LatLng(17.76805895789883, 73.98867899995774), "Electric Vehicle Charging Station");
-//        addCustomMarker(new LatLng(17.694930378913735, 74.01227633858099), "PHENIX ELECTRIC VEHICLE SERVICE CENTRE");
-//        addCustomMarker(new LatLng(17.679311649467895, 74.02188937567911), "Electric Vehicle Charging Station");
-//        addCustomMarker(new LatLng(17.443403075597374, 74.09429083064612), "E-Fill Charging Station");
+        addCustomMarker(new LatLng(17.69114708	,74.02417668), "Akshada Auto Garage","+91 8805521557");
+        addCustomMarker(new LatLng(17.69334744	,74.02432103), "Mobil Car Care - Samarth Garage & Spares","+91 7447792779");
+        addCustomMarker(new LatLng(17.70262988	,74.02489843), "VAJRESHWRI AUTO GARAGE","+91 9503300760");
+        addCustomMarker(new LatLng(17.6778907	,73.98673199), "ANIKET AUTO GARAGE","+91 7420901319");
+        addCustomMarker(new LatLng(17.67928091	,73.98904942), "SHREE GANESH AUTO GARAGE Car Service Station","+91 9975900706");
+        addCustomMarker(new LatLng(17.70122478	,73.99387687), "CHINTAMANI AUTO GARAGE","+91 7841812477");
+        addCustomMarker(new LatLng(17.67983084	,74.01378366), "MAULI DNYANRAJ AUTO GARAGE","+91 8552034030");
 
-        // Add more custom markers as needed
+        addCustomMarker(new LatLng(18.45681415	,73.83107813), "Best Car Mechanic & Repair Services - Shree Samarth Car Care","+91 8856980721");
+        addCustomMarker(new LatLng(18.46560683	,73.82249506), "Ghare Motors","+91 9822887455");
+        addCustomMarker(new LatLng(18.49035417	,73.80155237), "GoMechanic - Auto Assist","+91 8398970970");
+        addCustomMarker(new LatLng(18.57140922	,73.77112111), "Auto Solutions","+91 9623333999");
+        addCustomMarker(new LatLng(18.58052144	,73.77867422), "GoMechanic - Shetty's Multicar Service","+91 8398970970");
+        addCustomMarker(new LatLng(18.60004598	,73.75670156), "The Motor Works : Car Garage Car Service & Repairing Car Denting Painting Car Service Center In Wakad | Hinjewadi","+91 8087020003");
+        addCustomMarker(new LatLng(18.47633461	,73.85268508), "SHABARI MOTORS-CAR REPAIR AND SERVICE CAR MECHANIC","+91 9822850838");
+        addCustomMarker(new LatLng(18.53208763	,73.86575009), "GoMechanic - Car Breakdown Helps | Towing | Road Side Assistance","+91 8398970970");
+        addCustomMarker(new LatLng(18.58163062	,73.83962006), "GoMechanic - Car Service Center Khadki","+91 8398970970");
+        addCustomMarker(new LatLng(18.7380774	,73.43261543), "GoMechanic - Automobile Repair Workshop","+91 8398970970");
+        addCustomMarker(new LatLng(18.76489814	,73.42420403), "Sai Motors Garage","+91 9637720786");
+        addCustomMarker(new LatLng(18.75561804	,73.40619485), "Engineer's Autogarage","+91 9370726441");
+        addCustomMarker(new LatLng(18.76122578	,73.41718118), "A1 Car Garage And Mechanic","+91 9767210044");
+        addCustomMarker(new LatLng(18.76163213	,73.41829698), "om sai Enterprices","+91 7507427663");
+        addCustomMarker(new LatLng(18.78607116	,73.34542605), "Al Baksh Auto Garage","+91 9834789515");
+        addCustomMarker(new LatLng(18.79513121	,73.33358142), "Rajesh Auto Garage","+91 8087296363");
+        addCustomMarker(new LatLng(19.21361577	,72.9782264), "Royal Car Care-Car Service Center In Thane West-Car Cleaning Services In Thane West-Car Repair/Car AC Repair In Thane West","+91 8929763071");
+        addCustomMarker(new LatLng(19.26548253	,72.9620699), "Fix My Car-Car Repair center Near Me-Car Garage Near Thane-Premium Car Audi , VW , BMW, Mercedes Car Repair Services In Thane","+91 9619571110");
+        addCustomMarker(new LatLng(19.03984029	,73.0765711), "Sharhols Garage, Kharghar, Navi Mumbai - Car Repair Workshop","+91 8879348168");
+        addCustomMarker(new LatLng(19.0570324	,73.06098136), "Complete Car Care","+91 8652865211");
+        addCustomMarker(new LatLng(16.7451028	,74.28135399), "Ratnatreya Automobile ","+91 9527652716");
+        addCustomMarker(new LatLng(16.70653084	,74.22181338), "SHRI MAHALAXMI AUTO","+91 9822681789");
+        addCustomMarker(new LatLng(16.70228614	,74.23742073), "Hindustan Auto","+91 8421712670");
+        addCustomMarker(new LatLng(16.71095999	,74.23029144), "Shums Auto Care","+91 9922333011");
+        addCustomMarker(new LatLng(17.09838205	,74.24629211), "S M MOTOR GARAGE AND AUTOMOBILE","+91 8830439513");
+        addCustomMarker(new LatLng(16.88956321	,74.56626891), "Zhakir Auto Mechanic","+91 7498080601");
+        addCustomMarker(new LatLng(16.85145173	,74.59373473), "Siddhivinayak Autoworks","+91 9422408193");
+        addCustomMarker(new LatLng(17.4076669	,74.10175581), "Aaba Welding And Repair Works","+91 9881693970");
+        addCustomMarker(new LatLng(17.40493494	,74.10209264), "Badshah Auto Garage","+91 9850911562");
+        addCustomMarker(new LatLng(17.40340824	,74.10172774), "Shree Jugai Devi Garage","+91 9518535562");
+        addCustomMarker(new LatLng(17.40228329	,74.10169967), "Siddhanat Auto Garej","+91 7057673790");
+        addCustomMarker(new LatLng(17.29775033	,74.16760428), "Pk car care","+91 8888376562");
+        addCustomMarker(new LatLng(17.28121108	,74.17337826), "Shivsai Auto Garage","+91 9960276461");
+        addCustomMarker(new LatLng(17.2762989	,74.17952309), "Om Sai Auto","+91 7058356614");
+        addCustomMarker(new LatLng(17.27361106	,74.178657), "Shri Sidhnath Auto Service","+91 9359166034");
+        addCustomMarker(new LatLng(18.15681133	,73.9631474), "Sahyadri Auto","+91 9766880032");
+        addCustomMarker(new LatLng(18.13897242	,73.97875886), "Pawar Garage, shirwal NH 4","+91 7350507256");
+        addCustomMarker(new LatLng(18.13113123	,73.98301878), "Trimurti Garage","+91 8856980721");
+        addCustomMarker(new LatLng(18.14141956	,73.97493038), "Moraya Auto Guarage","+91 7350112335");
+        addCustomMarker(new LatLng(18.44159809	,73.85973842), "Mulani Motors","+91 9422502510");
+
     }
 
-    private void addCustomMarker(LatLng latLng, String title) {
+    private void addCustomMarker(LatLng latLng, String title, String mobile) {
         Bitmap customMarkerBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.mech_ic);
         BitmapDescriptor customMarkerIcon = BitmapDescriptorFactory.fromBitmap(customMarkerBitmap);
 
         Marker marker = mMap.addMarker(new MarkerOptions()
                 .position(latLng)
                 .title(title)
+                .snippet(mobile)
                 .visible(false)
                 .icon(customMarkerIcon));
 
